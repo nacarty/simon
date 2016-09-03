@@ -1,0 +1,140 @@
+#mainDiv{
+    width:475px;
+    height:475px;
+    border-radius: 10px;
+    margin:10vh auto;
+    padding:auto;
+    position:relative;
+}
+
+.button{
+    width:200px;
+    height:200px;
+    float:left;
+    border:20px solid;
+    margin:-1px;
+    position:relative;
+}
+#top-left{
+    background-color: green;
+    border-top-left-radius: 50%;
+}
+
+#top-right{
+    background-color: blue;
+    border-top-right-radius: 50%;
+    margin-left: -10px;
+}
+
+#bottom-left{
+    background-color: red;
+    border-bottom-left-radius: 50%;
+    margin-top: -10px;
+}
+
+#bottom-right{
+    background-color: yellow;
+    border-bottom-right-radius: 50%;
+    margin-left: -10px;    
+    margin-top: -10px;
+}
+
+#centerCircle{
+    width:200px;
+    height:200px;
+    border-radius: 25%;
+    background-color: white;
+    top:25%;
+    left:25%;
+    position:absolute;
+    border:15px solid;
+}
+#simon{
+    margin:15px auto -20px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 900;
+    /*font-family: arial sans serif;
+    background-color: orange;*/
+}
+#simon sup{
+    font-size: 20px;
+}
+#settings{
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+}
+#level, #start, #strict, #version{
+    width:22%;
+    float:left;
+}
+#version{
+    width:34%;
+    padding:0;
+    color:black;
+}
+#levelDisplay{
+    width:33px;
+    height:30px;
+    border-radius:10px;
+    background-color: black;
+    margin:auto;
+    color:yellow;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 25px;
+    font-weight: 800;
+    opacity:0.6;
+}
+
+#startBtn, #strictBtn, #versionBtn{
+    width:16px;
+    height:16px;
+    border-radius:100%;   
+    background-color: yellow;
+    margin:auto;
+    margin-bottom: -2px;
+    border:5px solid black;
+}
+
+#levelLabel, #startLabel, #strictLabel, #versionLabel{
+    text-align: center;
+    font-size: 10px;
+}
+
+#points, #status,#statBox{
+    width:85%;
+    margin:auto;
+    /*background-color: green; */
+    text-align:left;
+    padding-left:8px;
+    font-size:15px;    
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+#statBox{
+    margin-top: 73px;
+    text-align: center;
+    font-weight:900;
+    font-size: 18px;
+    width:90px;
+    color:white;
+    background-color: black;
+    border-radius:5px;
+    margin-bottom: 3px;
+    padding:2px 0;
+}
+#pointSpan, #progressSpan{
+    float:right;
+    text-align: right;
+    font-size: 18px;
+}
+
+.selected{
+    border-radius:100%;
+}
+
+audio{
+    display: none;
+}

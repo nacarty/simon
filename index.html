@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simon Says</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div id="mainDiv">
+            <div class="button" id="top-left" onclick='getUserPlay(0)'></div>
+            <div class="button" id="top-right" onclick='getUserPlay(1)'></div>
+            <div class="button" id="bottom-left" onclick='getUserPlay(2)'></div>
+            <div class="button" id="bottom-right" onclick='getUserPlay(3)'></div>               
+            <div id="centerCircle">
+                <p id = 'simon'>Simon<sup>&reg;</sup></p>
+                <div id='settings'>
+                    <div id='level'><div id='levelDisplay'>0</div><span id='levelLabel'>LEVEL</span></div>
+                    <div id='start' onclick='startGame()'><p id='startBtn'></p><span id='startLabel'>START</span></div>
+                    <div id='version' onclick='toggleVersion()'><p id='versionBtn'></p><span id='versionLabel'>VANILLA</span></div>
+                    <div id='strict' onclick='toggleStrict()'><p id='strictBtn'></p><span id='strictLabel'>SOFT</span></div>
+                </div>
+                <div>
+                    <div id='statBox'>STATUS</div>
+                    <div id='points'>POINTS:&nbsp;&nbsp;&nbsp;&nbsp;<span id='pointSpan'>0</span></div>
+                    <div id='status'>PROGRESS: <span id='progressSpan'>20 to go!</span></div>     
+                </div>
+            </div>
+       </div>
+        <audio id = 'sound1' controls preload='auto'>
+            <source src="simonSound1.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = 'sound2' controls preload='auto'>
+            <source  src="simonSound2.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = 'sound3' controls  preload='auto'>
+            <source src="simonSound3.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = 'sound4'  controls  preload='auto'>
+            <source src="simonSound4.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = 'sound5' controls preload='auto'>
+            <source src="simonGameSoundEnd.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = 'sound6' controls preload='auto'>
+            <source src="simonErrorSound.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>
