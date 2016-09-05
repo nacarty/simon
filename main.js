@@ -278,7 +278,7 @@ function toggleVersion()
         document.getElementById('versionLabel').innerHTML = movesObject.version;
         document.getElementById('versionBtn').style.backgroundColor = color;        
         document.getElementById('version').style.color = color;
-        setTimeout(alert, 100, 'You have selected "QUANDRANT" mode. In "QUADRANT" mode, the colors of the quadrants will shuffle BUT you are required to click the correct QUANDRANTs in sequence rather than the COLORs..');
+        setTimeout(alert, 100, 'You have selected "QUADRANT" mode. In "QUADRANT" mode, the colors of the quadrants will shuffle BUT you are required to click the correct QUANDRANTs in sequence rather than the COLORs..');
     }
     else 
     {
