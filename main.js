@@ -77,19 +77,29 @@ function moveAndMatchColors(version)
     if (version === versions.version1)
         return;
     
-    var arr1 = movesObject.colors, arr2 = [], temp, rand, moves=[];
+    var arr1 = movesObject.colors, arr2 = [], temp, rand, moves=[], sounds=[];
     
     for (var i = 0; i <4; i++)
     {
         arr2[i]= arr1[i];
+        sounds[i] = soundArray[i];
     }
-      
-    for (var j = 0; j <4; j++) //just move colors but keep the position/corner
+    
+    sounds[4]=soundArray[4];
+    sounds[5]=soundArray[5];
+          
+    for (var j = 0; j <4; j++) //just move colors but keep the position/corner/quadrant
     {
         rand = ~~(Math.random()*4);
+        
         temp = arr2[j];
         arr2[j]=arr2[rand];
         arr2[rand]= temp;
+        
+        temp = sounds[j];
+        sounds[j] = sounds[rand];
+        sounds[rand]=temp;
+        
         elements[j].style.backgroundColor = arr2[j];
         elements[rand].style.backgroundColor = arr2[rand];
     }
@@ -100,7 +110,7 @@ function moveAndMatchColors(version)
             {
                 for (j =0; j<4; j++)
                 {
-                    if (arr1[i]===arr2[j])
+                    if (arr1[i] === arr2[j])
                         for (var k = 0; k < movesObject.moves.length; k++)
                         {
                            if (movesObject.moves[k]=== i)
@@ -110,6 +120,7 @@ function moveAndMatchColors(version)
             }
             movesObject.moves = moves;
             movesObject.colors = arr2;
+            soundArray = sounds;
     }
 }
 
